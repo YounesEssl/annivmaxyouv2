@@ -3,7 +3,6 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger);
 
 	let drinkSection: HTMLElement;
 	let titleElement: HTMLElement;
@@ -27,6 +26,8 @@
 	const softs = ['Crazy', 'Coca', 'Oasis', 'Orangina', 'Ice Tea', 'Fanta', 'etc…'];
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
 		const mediaQuery = window.matchMedia('(max-width: 767px)');
 		isMobile = mediaQuery.matches;
 

@@ -3,7 +3,6 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger);
 
 	let foodSection: HTMLElement;
 	let titleElement: HTMLElement;
@@ -36,6 +35,8 @@
 	];
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
 		// Detect mobile
 		const mediaQuery = window.matchMedia('(max-width: 767px)');
 		isMobile = mediaQuery.matches;

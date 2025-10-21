@@ -3,7 +3,6 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger);
 
 	let venueSection: HTMLElement;
 	let titleElement: HTMLElement;
@@ -15,6 +14,8 @@
 	let isMobile = $state(false);
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
 		// Detect mobile avec matchMedia
 		const mediaQuery = window.matchMedia('(max-width: 767px)');
 		isMobile = mediaQuery.matches;

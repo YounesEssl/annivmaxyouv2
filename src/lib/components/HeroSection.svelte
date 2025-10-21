@@ -3,8 +3,6 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger);
-
 	let heroSection: HTMLElement;
 	let typewriterText: HTMLElement;
 	let cursor: HTMLElement;
@@ -16,6 +14,8 @@
 	const words = ["unique...", "inoubliable...", "immanquable..."];
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
 		// Detect mobile
 		isMobile = window.innerWidth < 768;
 		showParticles = window.innerWidth >= 768;
