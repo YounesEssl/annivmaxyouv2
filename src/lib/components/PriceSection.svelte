@@ -58,125 +58,237 @@
 			});
 		}
 
-		// Timeline principale
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: priceSection,
-				start: 'top 60%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse'
-			}
-		});
-
-		// Titre
-		timeline.fromTo(
+		// Titre - ScrollTrigger individuel
+		gsap.fromTo(
 			titleElement,
 			{ opacity: 0, y: 50 },
-			{ opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: titleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Introduction
-		timeline.fromTo(
+		// Introduction - ScrollTrigger individuel
+		gsap.fromTo(
 			introElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
-			'-=0.3'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.7,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: introElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Prix - "Le tarif est de"
-		timeline.fromTo(
+		// Prix Hero - ScrollTrigger individuel pour tout le bloc prix
+		gsap.fromTo(
 			priceLineElement,
 			{ opacity: 0 },
-			{ opacity: 1, duration: 0.5, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				duration: 0.5,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: priceLineElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Prix - "70€" HERO avec scale dramatique
-		timeline.fromTo(
+		gsap.fromTo(
 			priceHeroElement,
 			{ opacity: 0, scale: 0.5 },
-			{ opacity: 1, scale: 1, duration: 1, ease: 'back.out(1.7)' },
-			'-=0.1'
+			{
+				opacity: 1,
+				scale: 1,
+				duration: 1,
+				ease: 'back.out(1.7)',
+				scrollTrigger: {
+					trigger: priceHeroElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Prix - "PAR PERSONNE"
-		timeline.fromTo(
+		gsap.fromTo(
 			priceSubElement,
 			{ opacity: 0 },
-			{ opacity: 1, duration: 0.5, ease: 'power2.out' },
-			'-=0.3'
+			{
+				opacity: 1,
+				duration: 0.5,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: priceSubElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Prix - "pour tout le week-end"
-		timeline.fromTo(
+		gsap.fromTo(
 			priceNoteElement,
 			{ opacity: 0 },
-			{ opacity: 1, duration: 0.5, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				duration: 0.5,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: priceNoteElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Sous-titre "Ce que ça comprend"
-		timeline.fromTo(
+		// Sous-titre - ScrollTrigger individuel
+		gsap.fromTo(
 			subtitleElement,
 			{ opacity: 0, y: 20 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.1'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: subtitleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Carte 1
-		timeline.fromTo(
+		// Cartes - ScrollTriggers individuels
+		gsap.fromTo(
 			card1Element,
 			{ opacity: 0, scale: 0.8, y: 30 },
-			{ opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.5)' },
-			'-=0.2'
+			{
+				opacity: 1,
+				scale: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: card1Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Carte 2
-		timeline.fromTo(
+		gsap.fromTo(
 			card2Element,
 			{ opacity: 0, scale: 0.8, y: 30 },
-			{ opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.5)' },
-			'-=0.4'
+			{
+				opacity: 1,
+				scale: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: card2Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Carte 3
-		timeline.fromTo(
+		gsap.fromTo(
 			card3Element,
 			{ opacity: 0, scale: 0.8, y: 30 },
-			{ opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.5)' },
-			'-=0.4'
+			{
+				opacity: 1,
+				scale: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: card3Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Carte 4 ALCOOL - Plus d'impact
-		timeline.fromTo(
+		gsap.fromTo(
 			card4Element,
 			{ opacity: 0, scale: 0.7, y: 40 },
-			{ opacity: 1, scale: 1, y: 0, duration: 0.8, ease: 'back.out(1.7)' },
-			'-=0.4'
+			{
+				opacity: 1,
+				scale: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'back.out(1.7)',
+				scrollTrigger: {
+					trigger: card4Element,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Carte 5
-		timeline.fromTo(
+		gsap.fromTo(
 			card5Element,
 			{ opacity: 0, scale: 0.8, y: 30 },
-			{ opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(1.5)' },
-			'-=0.5'
+			{
+				opacity: 1,
+				scale: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: card5Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Divider
-		timeline.fromTo(
+		// Divider - ScrollTrigger individuel
+		gsap.fromTo(
 			dividerElement,
 			{ opacity: 0, scaleX: 0 },
-			{ opacity: 1, scaleX: 1, duration: 0.6, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				scaleX: 1,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: dividerElement,
+					start: 'top 75%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Message final
-		timeline.fromTo(
+		// Message final - ScrollTrigger individuel
+		gsap.fromTo(
 			finalMessageElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: finalMessageElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
 		// Rotation continue sur emoji alcool (desktop uniquement)

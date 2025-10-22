@@ -36,29 +36,38 @@
 			});
 		}
 
-		// Timeline principale
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: ctaSection,
-				start: 'top 60%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse'
-			}
-		});
-
-		// Message
-		timeline.fromTo(
+		// Message - ScrollTrigger individuel
+		gsap.fromTo(
 			messageElement,
 			{ opacity: 0, y: 40 },
-			{ opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: messageElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Bouton avec scale-in
-		timeline.fromTo(
+		// Bouton - ScrollTrigger individuel
+		gsap.fromTo(
 			buttonElement,
 			{ opacity: 0, scale: 0.8 },
-			{ opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.5)' },
-			'-=0.2'
+			{
+				opacity: 1,
+				scale: 1,
+				duration: 0.6,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: buttonElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
 		// Pulse continu du glow du bouton

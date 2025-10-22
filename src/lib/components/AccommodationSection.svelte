@@ -53,163 +53,160 @@
 			});
 		}
 
-		// Timeline principale avec ScrollTrigger
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: accommodationSection,
-				start: 'top 45%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse'
-			}
-		});
-
-		// Titre principal - fade-in-up
-		timeline.fromTo(
+		// Titre principal - ScrollTrigger individuel
+		gsap.fromTo(
 			titleElement,
-			{
-				opacity: 0,
-				y: 60
-			},
+			{ opacity: 0, y: 60 },
 			{
 				opacity: 1,
 				y: 0,
 				duration: 0.8,
-				ease: 'power3.out'
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: titleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
 			}
 		);
 
-		// Image - slide from left
-		timeline.fromTo(
+		// Image - ScrollTrigger individuel
+		gsap.fromTo(
 			imageElement,
-			{
-				opacity: 0,
-				x: -50,
-				scale: 0.95
-			},
+			{ opacity: 0, x: -50, scale: 0.95 },
 			{
 				opacity: 1,
 				x: 0,
 				scale: 1,
 				duration: 0.8,
-				ease: 'power3.out'
-			},
-			'-=0.4'
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: imageElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Intro text - slide from right
-		timeline.fromTo(
+		// Intro text - ScrollTrigger individuel
+		gsap.fromTo(
 			introElement,
-			{
-				opacity: 0,
-				x: 50
-			},
+			{ opacity: 0, x: 50 },
 			{
 				opacity: 1,
 				x: 0,
 				duration: 0.7,
-				ease: 'power2.out'
-			},
-			'-=0.5'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: introElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Sous-titre
-		timeline.fromTo(
+		// Sous-titre - ScrollTrigger individuel
+		gsap.fromTo(
 			subtitleElement,
-			{
-				opacity: 0,
-				y: 30
-			},
+			{ opacity: 0, y: 30 },
 			{
 				opacity: 1,
 				y: 0,
 				duration: 0.6,
-				ease: 'power2.out'
-			},
-			'+=0.5'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: subtitleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Bloc 1 avec gros chiffre "3"
-		timeline.fromTo(
+		// Bloc 1 - ScrollTrigger individuel
+		gsap.fromTo(
 			bloc1Element,
-			{
-				opacity: 0,
-				scale: 0.8,
-				y: 40
-			},
+			{ opacity: 0, scale: 0.8, y: 40 },
 			{
 				opacity: 1,
 				scale: 1,
 				y: 0,
 				duration: 0.7,
-				ease: 'back.out(1.5)'
-			},
-			'+=0.4'
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: bloc1Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Bloc 2 avec gros chiffre "12"
-		timeline.fromTo(
+		// Bloc 2 - ScrollTrigger individuel
+		gsap.fromTo(
 			bloc2Element,
-			{
-				opacity: 0,
-				scale: 0.8,
-				y: 40
-			},
+			{ opacity: 0, scale: 0.8, y: 40 },
 			{
 				opacity: 1,
 				scale: 1,
 				y: 0,
 				duration: 0.7,
-				ease: 'back.out(1.5)'
-			},
-			'-=0.3'
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: bloc2Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Note 1 - bounce léger
-		timeline.fromTo(
+		// Note 1 - ScrollTrigger individuel
+		gsap.fromTo(
 			note1Element,
-			{
-				opacity: 0,
-				y: 20
-			},
+			{ opacity: 0, y: 20 },
 			{
 				opacity: 1,
 				y: 0,
 				duration: 0.6,
-				ease: 'power2.out'
-			},
-			'+=0.5'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: note1Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Note 2 - bounce léger
-		timeline.fromTo(
+		// Note 2 - ScrollTrigger individuel
+		gsap.fromTo(
 			note2Element,
-			{
-				opacity: 0,
-				y: 20
-			},
+			{ opacity: 0, y: 20 },
 			{
 				opacity: 1,
 				y: 0,
 				duration: 0.6,
-				ease: 'power2.out'
-			},
-			'-=0.4'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: note2Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Conclusion
-		timeline.fromTo(
+		// Conclusion - ScrollTrigger individuel
+		gsap.fromTo(
 			conclusionElement,
-			{
-				opacity: 0,
-				y: 30
-			},
+			{ opacity: 0, y: 30 },
 			{
 				opacity: 1,
 				y: 0,
 				duration: 0.7,
-				ease: 'power3.out'
-			},
-			'+=0.5'
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: conclusionElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
 		// Effet parallaxe sur les orbes

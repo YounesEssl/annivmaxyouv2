@@ -71,98 +71,180 @@
 			});
 		}
 
-		// Timeline principale avec ScrollTrigger
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: foodSection,
-				start: 'top 60%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse'
-			}
-		});
-
-		// Titre principal
-		timeline.fromTo(
+		// Titre - ScrollTrigger individuel
+		gsap.fromTo(
 			titleElement,
 			{ opacity: 0, y: 60 },
-			{ opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: titleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Intro
-		timeline.fromTo(
+		// Intro - ScrollTrigger individuel
+		gsap.fromTo(
 			introElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.3'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: introElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Solution
-		timeline.fromTo(
+		// Solution - ScrollTrigger individuel
+		gsap.fromTo(
 			solutionElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.3'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: solutionElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// MAXI salad avec scale dramatique
-		timeline.fromTo(
+		// MAXI salad - ScrollTrigger individuel
+		gsap.fromTo(
 			maxiSaladElement,
 			{ opacity: 0, scale: 0.7, rotationX: -20 },
-			{ opacity: 1, scale: 1, rotationX: 0, duration: 0.9, ease: 'back.out(2)' },
-			'+=0.2'
+			{
+				opacity: 1,
+				scale: 1,
+				rotationX: 0,
+				duration: 0.9,
+				ease: 'back.out(2)',
+				scrollTrigger: {
+					trigger: maxiSaladElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Idea
-		timeline.fromTo(
+		// Idea - ScrollTrigger individuel
+		gsap.fromTo(
 			ideaElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.3'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: ideaElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Option
-		timeline.fromTo(
+		// Option - ScrollTrigger individuel
+		gsap.fromTo(
 			optionElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: optionElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Encouragement
-		timeline.fromTo(
+		// Encouragement - ScrollTrigger individuel
+		gsap.fromTo(
 			encouragementElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: encouragementElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Note (À noter)
-		timeline.fromTo(
+		// Note (À noter) - ScrollTrigger individuel
+		gsap.fromTo(
 			noteElement,
 			{ opacity: 0, scale: 0.9 },
-			{ opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.5)' },
-			'+=0.5'
+			{
+				opacity: 1,
+				scale: 1,
+				duration: 0.7,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: noteElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Friday details
-		timeline.fromTo(
+		// Friday details - ScrollTrigger individuel
+		gsap.fromTo(
 			fridayDetailsElement,
 			{ opacity: 0, x: -30 },
-			{ opacity: 1, x: 0, duration: 0.6, ease: 'power2.out' },
-			'+=0.2'
+			{
+				opacity: 1,
+				x: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: fridayDetailsElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Ideas list
-		timeline.fromTo(
+		// Ideas list - ScrollTrigger individuel
+		gsap.fromTo(
 			ideasListElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'+=0.4'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: ideasListElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Animer les items de la grille avec stagger from center
+		// Items de la grille - ScrollTrigger individuel
 		const allItems = gsap.utils.toArray<HTMLElement>('.idea-item');
-		timeline.fromTo(
+		gsap.fromTo(
 			allItems,
 			{ opacity: 0, scale: 0.8, y: 20 },
 			{
@@ -171,29 +253,52 @@
 				y: 0,
 				duration: 0.5,
 				stagger: {
-					amount: 0.8,
+					amount: 0.6,
 					from: 'center',
 					ease: 'power2.out'
 				},
-				ease: 'back.out(1.5)'
-			},
-			'+=0.2'
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: ideasListElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Chips note
-		timeline.fromTo(
+		// Chips note - ScrollTrigger individuel
+		gsap.fromTo(
 			chipsNoteElement,
 			{ opacity: 0, scale: 0.9 },
-			{ opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.5)' },
-			'+=0.3'
+			{
+				opacity: 1,
+				scale: 1,
+				duration: 0.5,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: chipsNoteElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Important
-		timeline.fromTo(
+		// Important - ScrollTrigger individuel
+		gsap.fromTo(
 			importantElement,
 			{ opacity: 0, y: 30, scale: 0.95 },
-			{ opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.5)' },
-			'+=0.5'
+			{
+				opacity: 1,
+				y: 0,
+				scale: 1,
+				duration: 0.7,
+				ease: 'back.out(1.5)',
+				scrollTrigger: {
+					trigger: importantElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
 		// Effet parallaxe sur les orbes

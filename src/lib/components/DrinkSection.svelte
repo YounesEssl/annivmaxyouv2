@@ -61,31 +61,26 @@
 			});
 		}
 
-		// Timeline principale
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: drinkSection,
-				start: 'top 60%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse'
-			}
-		});
-
-		// Titre
-		timeline.fromTo(
+		// Titre - animation individuelle
+		gsap.fromTo(
 			titleElement,
 			{ opacity: 0, y: 40 },
 			{
 				opacity: 1,
 				y: 0,
 				duration: 0.7,
-				ease: 'power2.out'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: titleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
 			}
 		);
 
-		// Annonce - lignes progressives
+		// Annonce - lignes progressives avec ScrollTrigger individuel
 		const announcementLines = announcementElement.querySelectorAll('.announcement-line');
-		timeline.fromTo(
+		gsap.fromTo(
 			announcementLines,
 			{ opacity: 0, x: -40 },
 			{
@@ -93,27 +88,35 @@
 				x: 0,
 				duration: 0.6,
 				stagger: 0.15,
-				ease: 'power2.out'
-			},
-			'+=0.3'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: announcementElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Image - en même temps que la première ligne
-		timeline.fromTo(
+		// Image - ScrollTrigger individuel
+		gsap.fromTo(
 			imageElement,
 			{ opacity: 0, x: 40 },
 			{
 				opacity: 1,
 				x: 0,
 				duration: 0.8,
-				ease: 'power2.out'
-			},
-			'-=0.6'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: imageElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Cartes alcools - apparition simple
+		// Cartes alcools - ScrollTrigger individuel
 		const alcoholCards = gsap.utils.toArray<HTMLElement>('.alcohol-card');
-		timeline.fromTo(
+		gsap.fromTo(
 			alcoholCards,
 			{ opacity: 0, y: 40 },
 			{
@@ -121,20 +124,32 @@
 				y: 0,
 				duration: 0.6,
 				stagger: 0.15,
-				ease: 'power2.out'
-			},
-			'+=0.4'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: alcoholCardsElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Divider - animation de dessin
-		timeline.fromTo(
+		// Divider - ScrollTrigger individuel
+		gsap.fromTo(
 			dividerElement.querySelectorAll('.divider-line'),
 			{ scaleX: 0 },
-			{ scaleX: 1, duration: 0.8, ease: 'power2.inOut' },
-			'+=0.5'
+			{
+				scaleX: 1,
+				duration: 0.8,
+				ease: 'power2.inOut',
+				scrollTrigger: {
+					trigger: dividerElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		timeline.fromTo(
+		gsap.fromTo(
 			dividerElement.querySelectorAll('.divider-dot'),
 			{ scale: 0, opacity: 0 },
 			{
@@ -142,14 +157,18 @@
 				opacity: 1,
 				duration: 0.4,
 				stagger: 0.1,
-				ease: 'back.out(3)'
-			},
-			'-=0.4'
+				ease: 'back.out(3)',
+				scrollTrigger: {
+					trigger: dividerElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Softs - apparition simple
+		// Softs - ScrollTrigger individuel
 		const softItems = gsap.utils.toArray<HTMLElement>('.soft-badge');
-		timeline.fromTo(
+		gsap.fromTo(
 			softItems,
 			{ opacity: 0, y: 30 },
 			{
@@ -157,17 +176,30 @@
 				y: 0,
 				duration: 0.5,
 				stagger: 0.1,
-				ease: 'power2.out'
-			},
-			'+=0.3'
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: softsElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Note eau - apparition en fade subtil
-		timeline.fromTo(
+		// Note eau - ScrollTrigger individuel
+		gsap.fromTo(
 			waterNoteElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 1, ease: 'power2.out' },
-			'+=0.4'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 1,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: waterNoteElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
 		// Parallaxe sur les orbes seulement

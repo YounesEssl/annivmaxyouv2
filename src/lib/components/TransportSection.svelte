@@ -51,69 +51,121 @@
 			});
 		}
 
-		// Timeline principale
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: transportSection,
-				start: 'top 60%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse'
-			}
-		});
-
-		// Titre
-		timeline.fromTo(
+		// Titre - ScrollTrigger individuel
+		gsap.fromTo(
 			titleElement,
 			{ opacity: 0, y: 40 },
-			{ opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.7,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: titleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Image
-		timeline.fromTo(
+		// Image - ScrollTrigger individuel
+		gsap.fromTo(
 			imageElement,
 			{ opacity: 0, x: 40 },
-			{ opacity: 1, x: 0, duration: 0.8, ease: 'power2.out' },
-			'-=0.3'
+			{
+				opacity: 1,
+				x: 0,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: imageElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Bloc 1
-		timeline.fromTo(
+		// Bloc 1 - ScrollTrigger individuel
+		gsap.fromTo(
 			bloc1Element,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.5'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: bloc1Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Divider 1
-		timeline.fromTo(
+		// Divider 1 - ScrollTrigger individuel
+		gsap.fromTo(
 			divider1Element.querySelector('div'),
 			{ scaleX: 0 },
-			{ scaleX: 1, duration: 0.5, ease: 'power2.out' },
-			'-=0.2'
+			{
+				scaleX: 1,
+				duration: 0.5,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: divider1Element,
+					start: 'top 75%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Bloc 2
-		timeline.fromTo(
+		// Bloc 2 - ScrollTrigger individuel
+		gsap.fromTo(
 			bloc2Element,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: bloc2Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Divider 2
-		timeline.fromTo(
+		// Divider 2 - ScrollTrigger individuel
+		gsap.fromTo(
 			divider2Element.querySelector('div'),
 			{ scaleX: 0 },
-			{ scaleX: 1, duration: 0.5, ease: 'power2.out' },
-			'-=0.2'
+			{
+				scaleX: 1,
+				duration: 0.5,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: divider2Element,
+					start: 'top 75%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Bloc 3
-		timeline.fromTo(
+		// Bloc 3 - ScrollTrigger individuel
+		gsap.fromTo(
 			bloc3Element,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.2'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: bloc3Element,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
 		// Parallaxe sur les orbes

@@ -47,37 +47,55 @@
 			});
 		}
 
-		// Timeline principale
-		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: downloadSection,
-				start: 'top 60%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse'
-			}
-		});
-
-		// Titre
-		timeline.fromTo(
+		// Titre - ScrollTrigger individuel
+		gsap.fromTo(
 			titleElement,
 			{ opacity: 0, y: 30 },
-			{ opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.7,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: titleElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Description
-		timeline.fromTo(
+		// Description - ScrollTrigger individuel
+		gsap.fromTo(
 			descriptionElement,
 			{ opacity: 0, y: 25 },
-			{ opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
-			'-=0.3'
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.7,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: descriptionElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
-		// Bouton
-		timeline.fromTo(
+		// Bouton - ScrollTrigger individuel
+		gsap.fromTo(
 			buttonElement,
 			{ opacity: 0, scale: 0.9 },
-			{ opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.3)' },
-			'-=0.2'
+			{
+				opacity: 1,
+				scale: 1,
+				duration: 0.6,
+				ease: 'back.out(1.3)',
+				scrollTrigger: {
+					trigger: buttonElement,
+					start: 'top 70%',
+					toggleActions: 'play none none reverse'
+				}
+			}
 		);
 
 		// Float animation sur l'icône (desktop uniquement)
