@@ -51,7 +51,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: downloadSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse'
 			}
@@ -95,7 +95,7 @@
 		gsap.to('.download-orb-1', {
 			scrollTrigger: {
 				trigger: downloadSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -106,7 +106,7 @@
 		gsap.to('.download-orb-2', {
 			scrollTrigger: {
 				trigger: downloadSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.2
 			},
@@ -118,7 +118,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: downloadSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();

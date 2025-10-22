@@ -57,7 +57,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: accommodationSection,
-				start: 'top 70%',
+				start: 'top 45%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse'
 			}
@@ -125,7 +125,7 @@
 				duration: 0.6,
 				ease: 'power2.out'
 			},
-			'-=0.3'
+			'+=0.5'
 		);
 
 		// Bloc 1 avec gros chiffre "3"
@@ -143,7 +143,7 @@
 				duration: 0.7,
 				ease: 'back.out(1.5)'
 			},
-			'-=0.2'
+			'+=0.4'
 		);
 
 		// Bloc 2 avec gros chiffre "12"
@@ -161,7 +161,7 @@
 				duration: 0.7,
 				ease: 'back.out(1.5)'
 			},
-			'-=0.5'
+			'-=0.3'
 		);
 
 		// Note 1 - bounce léger
@@ -177,7 +177,7 @@
 				duration: 0.6,
 				ease: 'power2.out'
 			},
-			'-=0.3'
+			'+=0.5'
 		);
 
 		// Note 2 - bounce léger
@@ -209,14 +209,14 @@
 				duration: 0.7,
 				ease: 'power3.out'
 			},
-			'-=0.3'
+			'+=0.5'
 		);
 
 		// Effet parallaxe sur les orbes
 		gsap.to('.accom-orb-1', {
 			scrollTrigger: {
 				trigger: accommodationSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -227,7 +227,7 @@
 		gsap.to('.accom-orb-2', {
 			scrollTrigger: {
 				trigger: accommodationSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.5
 			},
@@ -239,7 +239,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: accommodationSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();

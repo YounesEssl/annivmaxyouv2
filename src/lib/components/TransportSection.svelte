@@ -55,7 +55,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: transportSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse'
 			}
@@ -120,7 +120,7 @@
 		gsap.to('.transport-orb-1', {
 			scrollTrigger: {
 				trigger: transportSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -131,7 +131,7 @@
 		gsap.to('.transport-orb-2', {
 			scrollTrigger: {
 				trigger: transportSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.3
 			},
@@ -143,7 +143,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: transportSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();

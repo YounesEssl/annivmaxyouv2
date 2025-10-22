@@ -40,7 +40,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: ctaSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse'
 			}
@@ -88,7 +88,7 @@
 		gsap.to('.cta-orb', {
 			scrollTrigger: {
 				trigger: ctaSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -100,7 +100,7 @@
 		if (!isMobile && orbTween) {
 			ScrollTrigger.create({
 				trigger: ctaSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orbTween?.play();

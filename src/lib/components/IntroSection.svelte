@@ -52,7 +52,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: introSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse',
 				// markers: true, // Décommenter pour débugger
@@ -152,7 +152,7 @@
 		gsap.to('.intro-orb-1', {
 			scrollTrigger: {
 				trigger: introSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -163,7 +163,7 @@
 		gsap.to('.intro-orb-2', {
 			scrollTrigger: {
 				trigger: introSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.5
 			},
@@ -175,7 +175,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: introSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();

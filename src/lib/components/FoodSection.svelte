@@ -75,7 +75,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: foodSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse'
 			}
@@ -109,7 +109,7 @@
 			maxiSaladElement,
 			{ opacity: 0, scale: 0.7, rotationX: -20 },
 			{ opacity: 1, scale: 1, rotationX: 0, duration: 0.9, ease: 'back.out(2)' },
-			'-=0.2'
+			'+=0.2'
 		);
 
 		// Idea
@@ -117,7 +117,7 @@
 			ideaElement,
 			{ opacity: 0, y: 30 },
 			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.4'
+			'-=0.3'
 		);
 
 		// Option
@@ -125,7 +125,7 @@
 			optionElement,
 			{ opacity: 0, y: 30 },
 			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.3'
+			'-=0.2'
 		);
 
 		// Encouragement
@@ -133,7 +133,7 @@
 			encouragementElement,
 			{ opacity: 0, y: 30 },
 			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.3'
+			'-=0.2'
 		);
 
 		// Note (À noter)
@@ -141,7 +141,7 @@
 			noteElement,
 			{ opacity: 0, scale: 0.9 },
 			{ opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.5)' },
-			'-=0.2'
+			'+=0.5'
 		);
 
 		// Friday details
@@ -149,7 +149,7 @@
 			fridayDetailsElement,
 			{ opacity: 0, x: -30 },
 			{ opacity: 1, x: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.3'
+			'+=0.2'
 		);
 
 		// Ideas list
@@ -157,7 +157,7 @@
 			ideasListElement,
 			{ opacity: 0, y: 30 },
 			{ opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-			'-=0.3'
+			'+=0.4'
 		);
 
 		// Animer les items de la grille avec stagger from center
@@ -171,13 +171,13 @@
 				y: 0,
 				duration: 0.5,
 				stagger: {
-					amount: 0.6,
+					amount: 0.8,
 					from: 'center',
 					ease: 'power2.out'
 				},
 				ease: 'back.out(1.5)'
 			},
-			'-=0.5'
+			'+=0.2'
 		);
 
 		// Chips note
@@ -185,7 +185,7 @@
 			chipsNoteElement,
 			{ opacity: 0, scale: 0.9 },
 			{ opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.5)' },
-			'-=0.2'
+			'+=0.3'
 		);
 
 		// Important
@@ -193,14 +193,14 @@
 			importantElement,
 			{ opacity: 0, y: 30, scale: 0.95 },
 			{ opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.5)' },
-			'-=0.2'
+			'+=0.5'
 		);
 
 		// Effet parallaxe sur les orbes
 		gsap.to('.food-orb-1', {
 			scrollTrigger: {
 				trigger: foodSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -211,7 +211,7 @@
 		gsap.to('.food-orb-2', {
 			scrollTrigger: {
 				trigger: foodSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.3
 			},
@@ -223,7 +223,7 @@
 		gsap.to(maxiSaladElement, {
 			scrollTrigger: {
 				trigger: maxiSaladElement,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 2
 			},
@@ -247,7 +247,7 @@
 		gsap.to(ideasListElement.querySelector('.grid'), {
 			scrollTrigger: {
 				trigger: ideasListElement,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.5
 			},
@@ -263,7 +263,7 @@
 				scale: 1,
 				scrollTrigger: {
 					trigger: noteElement,
-					start: 'top bottom',
+					start: 'top 80%',
 					end: 'center center',
 					scrub: 1
 				},
@@ -278,7 +278,7 @@
 				scale: 1,
 				scrollTrigger: {
 					trigger: importantElement,
-					start: 'top bottom',
+					start: 'top 80%',
 					end: 'center center',
 					scrub: 1
 				},
@@ -323,7 +323,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: foodSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();

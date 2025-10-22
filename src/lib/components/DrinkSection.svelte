@@ -65,7 +65,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: drinkSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse'
 			}
@@ -92,10 +92,10 @@
 				opacity: 1,
 				x: 0,
 				duration: 0.6,
-				stagger: 0.1,
+				stagger: 0.15,
 				ease: 'power2.out'
 			},
-			'-=0.3'
+			'+=0.3'
 		);
 
 		// Image - en même temps que la première ligne
@@ -108,7 +108,7 @@
 				duration: 0.8,
 				ease: 'power2.out'
 			},
-			'-=0.7'
+			'-=0.6'
 		);
 
 		// Cartes alcools - apparition simple
@@ -120,10 +120,10 @@
 				opacity: 1,
 				y: 0,
 				duration: 0.6,
-				stagger: 0.1,
+				stagger: 0.15,
 				ease: 'power2.out'
 			},
-			'-=0.4'
+			'+=0.4'
 		);
 
 		// Divider - animation de dessin
@@ -131,7 +131,7 @@
 			dividerElement.querySelectorAll('.divider-line'),
 			{ scaleX: 0 },
 			{ scaleX: 1, duration: 0.8, ease: 'power2.inOut' },
-			'-=0.3'
+			'+=0.5'
 		);
 
 		timeline.fromTo(
@@ -156,10 +156,10 @@
 				opacity: 1,
 				y: 0,
 				duration: 0.5,
-				stagger: 0.08,
+				stagger: 0.1,
 				ease: 'power2.out'
 			},
-			'-=0.3'
+			'+=0.3'
 		);
 
 		// Note eau - apparition en fade subtil
@@ -167,14 +167,14 @@
 			waterNoteElement,
 			{ opacity: 0, y: 30 },
 			{ opacity: 1, y: 0, duration: 1, ease: 'power2.out' },
-			'-=0.3'
+			'+=0.4'
 		);
 
 		// Parallaxe sur les orbes seulement
 		gsap.to('.drink-orb-1', {
 			scrollTrigger: {
 				trigger: drinkSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -185,7 +185,7 @@
 		gsap.to('.drink-orb-2', {
 			scrollTrigger: {
 				trigger: drinkSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.2
 			},
@@ -197,7 +197,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: drinkSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();

@@ -54,7 +54,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: luggageSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse'
 			}
@@ -130,7 +130,7 @@
 		gsap.to('.luggage-orb-1', {
 			scrollTrigger: {
 				trigger: luggageSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -141,7 +141,7 @@
 		gsap.to('.luggage-orb-2', {
 			scrollTrigger: {
 				trigger: luggageSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.3
 			},
@@ -153,7 +153,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: luggageSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();

@@ -54,7 +54,7 @@
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: venueSection,
-				start: 'top 75%',
+				start: 'top 60%',
 				end: 'bottom 20%',
 				toggleActions: 'play none none reverse',
 				// markers: true, // Décommenter pour débugger
@@ -184,7 +184,7 @@
 		gsap.to(imageElement, {
 			scrollTrigger: {
 				trigger: venueSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.5
 			},
@@ -196,7 +196,7 @@
 		gsap.to('.venue-orb-1', {
 			scrollTrigger: {
 				trigger: venueSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1
 			},
@@ -207,7 +207,7 @@
 		gsap.to('.venue-orb-2', {
 			scrollTrigger: {
 				trigger: venueSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				scrub: 1.2
 			},
@@ -219,7 +219,7 @@
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: venueSection,
-				start: 'top bottom',
+				start: 'top 80%',
 				end: 'bottom top',
 				onEnter: () => {
 					orb1Tween?.play();
