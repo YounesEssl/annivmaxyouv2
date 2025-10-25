@@ -157,7 +157,7 @@
 
 	<!-- Orbe central spotlight -->
 	<div
-		class="cta-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-r from-purple-500/25 to-blue-500/25 blur-3xl pointer-events-none"
+		class="cta-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-r from-emerald-500/28 to-pink-500/28 blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
@@ -175,7 +175,7 @@
 			<!-- Glow du bouton -->
 			<div
 				bind:this={buttonGlowElement}
-				class="absolute -inset-4 bg-gradient-to-r from-purple-600/40 to-blue-600/40 rounded-full blur-2xl"
+				class="absolute -inset-4 bg-gradient-to-r from-emerald-600/50 to-pink-600/50 rounded-full blur-2xl"
 				style="will-change: transform, opacity;"
 			></div>
 
@@ -185,7 +185,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="relative inline-flex items-center gap-4 px-10 sm:px-14 py-5 sm:py-7 text-xl sm:text-2xl md:text-3xl font-bold text-white rounded-full shadow-2xl transition-all duration-300 active:scale-95"
-				style="background: linear-gradient(135deg, rgb(147 51 234) 0%, rgb(37 99 235) 100%); will-change: transform;"
+				style="background: linear-gradient(135deg, rgb(16 185 129) 0%, rgb(236 72 153) 100%); will-change: transform;"
 			>
 				<span>S'inscrire maintenant</span>
 				<span bind:this={arrowElement} class="text-2xl sm:text-3xl" style="will-change: transform;">→</span>

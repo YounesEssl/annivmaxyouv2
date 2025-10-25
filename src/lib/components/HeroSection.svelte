@@ -250,18 +250,18 @@
 	class="relative w-full"
 	style="height: 100dvh; background: linear-gradient(180deg,
 		rgb(2 6 23) 0%,
-		rgb(59 7 100) 20%,
-		rgb(30 27 75) 40%,
+		rgb(74 4 78) 15%,
+		rgb(24 51 71) 35%,
 		rgb(15 23 42) 70%
 	); overflow-x: clip; overflow-y: visible;"
 >
 	<!-- Orbes lumineux -->
 	<div
-		class="orb-1 absolute -right-20 -top-20 h-96 w-96 rounded-full bg-purple-500/20 blur-xl md:blur-3xl pointer-events-none"
+		class="orb-1 absolute -right-20 -top-20 h-96 w-96 rounded-full bg-fuchsia-500/22 blur-xl md:blur-3xl pointer-events-none"
 		style="z-index: 5;"
 	></div>
 	<div
-		class="orb-2 absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-blue-500/20 blur-xl md:blur-3xl pointer-events-none"
+		class="orb-2 absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-cyan-500/22 blur-xl md:blur-3xl pointer-events-none"
 		style="z-index: 5;"
 	></div>
 

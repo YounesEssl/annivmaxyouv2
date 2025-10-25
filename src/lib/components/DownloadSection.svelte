@@ -189,11 +189,11 @@
 
 	<!-- Orbes lumineux -->
 	<div
-		class="download-orb-1 absolute left-0 top-1/3 w-96 h-96 lg:w-[28rem] lg:h-[28rem] rounded-full bg-purple-500/20 blur-3xl pointer-events-none"
+		class="download-orb-1 absolute left-0 top-1/3 w-96 h-96 lg:w-[28rem] lg:h-[28rem] rounded-full bg-sky-500/22 blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 	<div
-		class="download-orb-2 absolute right-0 bottom-1/3 w-96 h-96 lg:w-[28rem] lg:h-[28rem] rounded-full bg-blue-500/20 blur-3xl pointer-events-none"
+		class="download-orb-2 absolute right-0 bottom-1/3 w-96 h-96 lg:w-[28rem] lg:h-[28rem] rounded-full bg-amber-500/22 blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
@@ -203,7 +203,7 @@
 		<div bind:this={titleElement} class="opacity-0">
 			<h2
 				class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black"
-				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(221 214 254) 0%, rgb(186 230 253) 50%, rgb(221 214 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;"
+				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(14 165 233) 0%, rgb(125 211 252) 50%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;"
 			>
 				Besoin d'un récap ?
 			</h2>
@@ -222,18 +222,18 @@
 				href="/recap-anniv.pdf"
 				download
 				class="relative group flex items-center gap-6 px-8 sm:px-10 py-6 sm:py-8 rounded-2xl border-2 backdrop-blur-sm transition-all duration-300 active:scale-95"
-				style="background: linear-gradient(135deg, rgb(88 28 135 / 0.4) 0%, rgb(30 58 138 / 0.4) 100%); border-color: rgb(147 51 234 / 0.4); will-change: transform; box-shadow: 0 20px 50px rgb(0 0 0 / 0.3);"
+				style="background: linear-gradient(135deg, rgb(7 89 133 / 0.4) 0%, rgb(180 83 9 / 0.4) 100%); border-color: rgb(14 165 233 / 0.5); will-change: transform; box-shadow: 0 20px 50px rgb(0 0 0 / 0.3);"
 			>
 				<!-- Glow effect -->
 				<div
-					class="absolute -inset-1 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-300"
+					class="absolute -inset-1 bg-gradient-to-r from-sky-600/35 to-amber-600/35 rounded-2xl blur-xl opacity-50 group-hover:opacity-80 transition-opacity duration-300"
 				></div>
 
 				<!-- Icône Download -->
 				<div
 					bind:this={iconElement}
 					class="relative flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center"
-					style="background: linear-gradient(135deg, rgb(147 51 234 / 0.5) 0%, rgb(37 99 235 / 0.5) 100%); will-change: transform;"
+					style="background: linear-gradient(135deg, rgb(14 165 233 / 0.6) 0%, rgb(251 191 36 / 0.6) 100%); will-change: transform;"
 				>
 					<svg
 						class="w-8 h-8 sm:w-10 sm:h-10 text-white"

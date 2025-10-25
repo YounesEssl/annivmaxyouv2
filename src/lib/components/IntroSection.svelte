@@ -4,11 +4,10 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	let introSection: HTMLElement;
-	let bloc1: HTMLElement;
-	let dateElement: HTMLElement;
-	let bloc2Intro: HTMLElement;
-	let inoubliableWord: HTMLElement;
-	let bloc2Outro: HTMLElement;
+	let titleElement: HTMLElement;
+	let dateCardElement: HTMLElement;
+	let descriptionElement: HTMLElement;
+	let highlightWordElement: HTMLElement;
 	let isMobile = $state(false);
 
 	onMount(() => {
@@ -48,105 +47,84 @@
 			});
 		}
 
-		// Animation scroll avec ScrollTrigger - animations séquencées plus rapides
+		// Animation avec ScrollTrigger - tout centré et fluide
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: introSection,
 				start: 'top 60%',
-				end: 'bottom 20%',
-				toggleActions: 'play none none reverse',
-				// markers: true, // Décommenter pour débugger
+				toggleActions: 'play none none reverse'
 			}
 		});
 
-		// Bloc 1 - texte principal avec fade-in-up
+		// Titre
 		timeline.fromTo(
-			bloc1,
-			{
-				opacity: 0,
-				y: 70
-			},
-			{
-				opacity: 1,
-				y: 0,
-				duration: 0.7,
-				ease: 'power3.out'
-			}
+			titleElement,
+			{ opacity: 0, y: 50 },
+			{ opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
 		);
 
-		// Pause courte avant la date
-		timeline.to({}, { duration: 0.15 });
-
-		// Date "28 mars" - animation spéciale avec scale
+		// Date card avec un petit délai
 		timeline.fromTo(
-			dateElement,
-			{
-				opacity: 0,
-				scale: 0.75
-			},
-			{
-				opacity: 1,
-				scale: 1,
-				duration: 0.8,
-				ease: 'back.out(1.7)'
-			}
+			dateCardElement,
+			{ opacity: 0, scale: 0.9, y: 30 },
+			{ opacity: 1, scale: 1, y: 0, duration: 0.8, ease: 'back.out(1.5)' },
+			'-=0.4'
 		);
 
-		// Pause courte avant le build up
-		timeline.to({}, { duration: 0.1 });
-
-		// Bloc 2 intro - fade normal
+		// Description
 		timeline.fromTo(
-			bloc2Intro,
-			{
-				opacity: 0,
-				y: 40
-			},
-			{
-				opacity: 1,
-				y: 0,
-				duration: 0.6,
-				ease: 'power2.out'
-			}
+			descriptionElement,
+			{ opacity: 0, y: 30 },
+			{ opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
+			'-=0.3'
 		);
 
-		// Très courte pause avant "inoubliable"
-		timeline.to({}, { duration: 0.05 });
+		// Mot highlight - animation lettre par lettre
+		const letters = gsap.utils.toArray<HTMLElement>('.inoubliable-letter');
+		letters.forEach((letter, i) => {
+			timeline.fromTo(
+				letter,
+				{
+					opacity: 0,
+					y: 50,
+					rotationX: -90,
+					scale: 0.5
+				},
+				{
+					opacity: 1,
+					y: 0,
+					rotationX: 0,
+					scale: 1,
+					duration: 0.5,
+					ease: 'back.out(2)',
+					onComplete: () => {
+						// Animation de rebond subtile après apparition de la dernière lettre
+						if (i === letters.length - 1) {
+							gsap.to(letters, {
+								y: -10,
+								duration: 0.3,
+								stagger: 0.03,
+								yoyo: true,
+								repeat: 1,
+								ease: 'power2.inOut'
+							});
+						}
+					}
+				},
+				i === 0 ? '-=0.2' : '-=0.35' // Stagger entre les lettres
+			);
+		});
 
-		// "inoubliable" - animation dramatique séparée
-		timeline.fromTo(
-			inoubliableWord,
-			{
-				opacity: 0,
-				scale: 0.65,
-				y: 35
-			},
-			{
-				opacity: 1,
-				scale: 1,
-				y: 0,
-				duration: 0.75,
-				ease: 'back.out(1.4)'
-			}
-		);
-
-		// Très courte pause avant conclusion
-		timeline.to({}, { duration: 0.05 });
-
-		// Bloc 2 outro - fade normal
-		timeline.fromTo(
-			bloc2Outro,
-			{
-				opacity: 0,
-				y: 30
-			},
-			{
-				opacity: 1,
-				y: 0,
-				duration: 0.5,
-				ease: 'power2.out'
-			}
-		);
+		// Animation continue de shimmer sur le mot complet
+		if (!isMobile) {
+			gsap.to('.inoubliable-shimmer', {
+				backgroundPosition: '200% center',
+				duration: 3,
+				repeat: -1,
+				ease: 'none',
+				delay: 1
+			});
+		}
 
 		// Effet parallaxe sur les orbes
 		gsap.to('.intro-orb-1', {
@@ -171,7 +149,7 @@
 			ease: 'none'
 		});
 
-		// Pause animations orbes quand section hors viewport (desktop uniquement)
+		// Pause animations orbes quand section hors viewport
 		if (!isMobile && orb1Tween && orb2Tween) {
 			ScrollTrigger.create({
 				trigger: introSection,
@@ -208,78 +186,103 @@
 <section
 	id="intro-section"
 	bind:this={introSection}
-	class="relative pt-20 sm:pt-24 pb-24 sm:pb-32 px-6 sm:px-10"
+	class="relative min-h-screen flex items-center justify-center pt-20 sm:pt-24 pb-24 sm:pb-32 px-6 sm:px-10"
 	style="background: rgb(15 23 42); overflow-x: clip; overflow-y: visible;"
 >
 	<!-- Orbes lumineux -->
 	<div
-		class="intro-orb-1 absolute -right-20 -top-20 w-96 h-96 lg:w-[500px] lg:h-[500px] rounded-full bg-purple-500/15 blur-xl md:blur-3xl pointer-events-none"
+		class="intro-orb-1 absolute -right-20 -top-20 w-96 h-96 lg:w-[500px] lg:h-[500px] rounded-full bg-rose-500/18 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 5;"
 	></div>
 	<div
-		class="intro-orb-2 absolute -bottom-20 -left-20 w-96 h-96 lg:w-[500px] lg:h-[500px] rounded-full bg-blue-500/15 blur-xl md:blur-3xl pointer-events-none"
+		class="intro-orb-2 absolute -bottom-20 -left-20 w-96 h-96 lg:w-[500px] lg:h-[500px] rounded-full bg-teal-500/18 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 5;"
 	></div>
 
-
-	<!-- Contenu avec agencement créatif -->
-	<div class="relative z-10 max-w-5xl mx-auto px-4">
-		<!-- Bloc 1 - Introduction alignée à gauche -->
-		<div bind:this={bloc1} class="opacity-0 mb-16 sm:mb-20 max-w-3xl" style="will-change: transform, opacity; transform: translateZ(0);">
-			<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-light leading-tight mb-4">
-				On est <span class="font-bold text-white">très heureux</span><br class="hidden sm:block" />
-				de vous inviter à célébrer notre<br />
+	<!-- Contenu centré et unifié -->
+	<div class="relative z-10 max-w-4xl mx-auto text-center space-y-12 sm:space-y-16">
+		<!-- Titre principal -->
+		<div bind:this={titleElement} class="opacity-0">
+			<h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-light leading-tight">
+				Nous sommes <span class="font-bold text-white">très heureux</span>
+				<br />
+				de vous inviter à célébrer notre
+				<br />
 				<span class="font-bold text-white">anniversaire commun</span>
 			</h2>
 		</div>
 
-		<!-- Date - centré, grand, avec emphase -->
-		<div bind:this={dateElement} class="opacity-0 text-center mb-12 sm:mb-16" style="will-change: transform, opacity;">
-			<p class="text-sm sm:text-base md:text-lg text-white/70 font-light mb-3 tracking-wider uppercase">
-				le week-end du
-			</p>
-			<p
-				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black inline-block transition-transform duration-300 hover:scale-105 mb-4"
-				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(216 180 254) 0%, rgb(221 214 254) 50%, rgb(147 197 253) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;"
-			>
-				28 mars
-			</p>
-			<p class="text-xl sm:text-2xl md:text-3xl text-white font-light mt-4">
-				dans un
-				<span class="font-semibold text-white relative inline-block mx-1">
-					lieu privatisé
-					<span
-						class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-400/50 via-purple-300/50 to-purple-400/50"
-					></span>
-				</span>
-				<br class="sm:hidden" />
-				à l'occasion !
-			</p>
+		<!-- Card de la date - design élégant et unifié -->
+		<div bind:this={dateCardElement} class="opacity-0">
+			<div class="relative inline-block">
+				<!-- Glow effect -->
+				<div class="absolute -inset-6 bg-gradient-to-r from-rose-500/30 via-pink-500/30 to-teal-500/30 rounded-3xl blur-3xl opacity-60 animate-pulse-slow"></div>
+
+				<div class="relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-3xl border border-white/10 p-8 sm:p-10 md:p-12">
+					<!-- Date principale -->
+					<h3
+						class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6"
+						style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(244 114 182) 0%, rgb(251 207 232) 50%, rgb(94 234 212) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1;"
+					>
+						27 - 29 Mars
+					</h3>
+
+					<!-- Horaires détaillés -->
+					<div class="space-y-3 mb-6">
+						<div class="flex items-center justify-center gap-3">
+							<svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+							<p class="text-lg sm:text-xl text-white/90 font-light">
+								<span class="font-semibold text-white">Vendredi 19h</span> → <span class="font-semibold text-white">Dimanche 14h</span>
+							</p>
+						</div>
+					</div>
+
+					<!-- Lieu -->
+					<div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10">
+						<svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+						</svg>
+						<span class="text-base sm:text-lg text-white/90 font-medium">
+							Lieu privatisé
+						</span>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<!-- Bloc 2 - Build up aligné à droite -->
-		<div bind:this={bloc2Intro} class="opacity-0 text-right mb-8 sm:mb-12 ml-auto max-w-2xl" style="will-change: transform, opacity; transform: translateZ(0);">
-			<p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 font-light leading-relaxed">
-				On a vu les choses
-				<span class="font-bold text-white relative inline-block">
-					très grand
-					<span
-						class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-400/60 via-purple-300/60 to-purple-400/60"
-					></span>
-				</span>
+		<!-- Description -->
+		<div bind:this={descriptionElement} class="opacity-0">
+			<p class="text-2xl sm:text-3xl md:text-4xl text-white/80 font-light leading-relaxed">
+				On a vu les choses <span class="font-semibold text-white">très grand</span>
 				<br />
 				pour que ce week-end soit
 			</p>
 		</div>
 
-		<!-- Mot clé central - ÉNORME et centré -->
-		<div bind:this={inoubliableWord} class="opacity-0 text-center my-12 sm:my-16 md:my-20" style="will-change: transform, opacity;">
-			<p
-				class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black transition-transform duration-300 hover:scale-105"
-				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(221 214 254) 0%, rgb(186 230 253) 50%, rgb(221 214 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; will-change: transform; line-height: 0.95; letter-spacing: -0.02em;"
-			>
-				inoubliable
-			</p>
+		<!-- Mot highlight final -->
+		<div bind:this={highlightWordElement}>
+			<div class="relative inline-block" style="perspective: 1000px;">
+				<!-- Glow effect -->
+				<div class="absolute -inset-8 bg-gradient-to-r from-violet-500/30 via-fuchsia-500/30 to-orange-500/30 rounded-full blur-3xl opacity-70 animate-pulse-slow"></div>
+
+				<h3
+					class="relative text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black"
+					style="font-family: var(--font-serif); line-height: 1; letter-spacing: -0.02em;"
+				>
+					{#each 'Inoubliable'.split('') as letter, i}
+						<span
+							class="inline-block inoubliable-letter inoubliable-shimmer"
+							data-index={i}
+							style="opacity: 0; background: linear-gradient(135deg, rgb(139 92 246) 0%, rgb(217 70 239) 25%, rgb(236 72 153) 50%, rgb(251 146 60) 75%, rgb(251 191 36) 100%); background-size: 200% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;"
+						>
+							{letter}
+						</span>
+					{/each}
+				</h3>
+			</div>
 		</div>
 	</div>
 </section>
@@ -289,5 +292,30 @@
 	.intro-orb-1,
 	.intro-orb-2 {
 		transform: translate3d(0, 0, 0);
+	}
+
+	.inoubliable-letter {
+		transform-style: preserve-3d;
+		will-change: transform, opacity;
+		display: inline-block;
+		transform: translateZ(0);
+	}
+
+	.inoubliable-shimmer {
+		will-change: background-position;
+	}
+
+	@keyframes pulse-slow {
+		0%,
+		100% {
+			opacity: 0.6;
+		}
+		50% {
+			opacity: 1;
+		}
+	}
+
+	.animate-pulse-slow {
+		animation: pulse-slow 4s ease-in-out infinite;
 	}
 </style>

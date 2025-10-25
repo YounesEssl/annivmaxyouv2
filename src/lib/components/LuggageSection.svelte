@@ -260,11 +260,11 @@
 
 	<!-- Orbes lumineux -->
 	<div
-		class="luggage-orb-1 absolute right-0 top-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-purple-500/20 blur-xl md:blur-3xl pointer-events-none"
+		class="luggage-orb-1 absolute right-0 top-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-fuchsia-500/20 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 	<div
-		class="luggage-orb-2 absolute left-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-blue-500/20 blur-xl md:blur-3xl pointer-events-none"
+		class="luggage-orb-2 absolute left-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-yellow-500/20 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
@@ -274,7 +274,7 @@
 		<div bind:this={titleElement} class="opacity-0 mb-12 sm:mb-16 text-center">
 			<h2
 				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black pb-2"
-				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(221 214 254) 0%, rgb(186 230 253) 50%, rgb(221 214 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;"
+				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(217 70 239) 0%, rgb(232 121 249) 50%, rgb(250 204 21) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;"
 			>
 				Dans ma valise j'ai…
 			</h2>
@@ -356,7 +356,7 @@
 						Pour la soirée du samedi, c'est
 						<span
 							class="font-semibold"
-							style="background: linear-gradient(135deg, rgb(167 139 250) 0%, rgb(147 197 253) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+							style="background: linear-gradient(135deg, rgb(232 121 249) 0%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
 						>
 							tenue correcte exigée
 						</span>.

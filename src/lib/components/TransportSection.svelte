@@ -248,11 +248,11 @@
 
 	<!-- Orbes lumineux -->
 	<div
-		class="transport-orb-1 absolute left-0 top-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-blue-500/20 blur-xl md:blur-3xl pointer-events-none"
+		class="transport-orb-1 absolute left-0 top-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-lime-500/20 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 	<div
-		class="transport-orb-2 absolute right-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-purple-500/20 blur-xl md:blur-3xl pointer-events-none"
+		class="transport-orb-2 absolute right-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-amber-500/20 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
@@ -262,7 +262,7 @@
 		<div bind:this={titleElement} class="opacity-0 mb-12 sm:mb-16 text-center">
 			<h2
 				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black pb-2"
-				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(221 214 254) 0%, rgb(186 230 253) 50%, rgb(221 214 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;"
+				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(132 204 22) 0%, rgb(163 230 53) 50%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;"
 			>
 				Transport
 			</h2>
@@ -302,7 +302,7 @@
 						Une fois sur place, pas de galère on a un grand
 						<span
 							class="font-semibold"
-							style="background: linear-gradient(135deg, rgb(167 139 250) 0%, rgb(147 197 253) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+							style="background: linear-gradient(135deg, rgb(163 230 53) 0%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
 						>
 							parking privé
 						</span>, juste à côté des chalets.
@@ -318,7 +318,7 @@
 			<div bind:this={imageElement} class="opacity-0 order-first lg:order-last">
 				<div class="relative">
 					<!-- Glow -->
-					<div class="absolute -inset-2 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-70"></div>
+					<div class="absolute -inset-2 bg-gradient-to-r from-lime-500/25 via-green-500/25 to-amber-500/25 rounded-3xl blur-2xl opacity-70"></div>
 
 					<div class="relative">
 						<img

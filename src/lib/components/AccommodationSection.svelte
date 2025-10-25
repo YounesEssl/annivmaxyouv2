@@ -278,11 +278,11 @@
 >
 	<!-- Orbes lumineux -->
 	<div
-		class="accom-orb-1 absolute left-0 top-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-purple-500/15 blur-xl md:blur-3xl pointer-events-none"
+		class="accom-orb-1 absolute left-0 top-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-cyan-500/18 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 	<div
-		class="accom-orb-2 absolute right-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-blue-500/15 blur-xl md:blur-3xl pointer-events-none"
+		class="accom-orb-2 absolute right-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-orange-500/18 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
@@ -292,7 +292,7 @@
 		<div bind:this={titleElement} class="opacity-0 mb-12 sm:mb-16 text-center">
 			<h2
 				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black transition-all duration-500 hover:tracking-wide"
-				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(221 214 254) 0%, rgb(186 230 253) 50%, rgb(221 214 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1;"
+				style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(6 182 212) 0%, rgb(103 232 249) 50%, rgb(251 146 60) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1;"
 			>
 				Pour bien dormir
 			</h2>
@@ -305,7 +305,7 @@
 				<div class="relative group" style="perspective: 1000px;">
 					<!-- Glow effect -->
 					<div
-						class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow"
+						class="absolute -inset-1 bg-gradient-to-r from-cyan-500/25 via-teal-500/25 to-orange-500/25 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow"
 					></div>
 
 					<!-- Image container -->
@@ -320,7 +320,7 @@
 
 						<!-- Overlay au hover -->
 						<div
-							class="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+							class="absolute inset-0 bg-gradient-to-t from-cyan-500/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
 						></div>
 					</div>
 				</div>
@@ -356,11 +356,11 @@
 			<!-- BLOC 1 - Grands chalets -->
 			<div
 				bind:this={bloc1Element}
-				class="opacity-0 relative group p-8 sm:p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-purple-900/10 to-transparent backdrop-blur-sm hover:border-purple-500/30 transition-all duration-500"
+				class="opacity-0 relative group p-8 sm:p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-900/15 to-transparent backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-500"
 			>
 				<!-- Glow effect -->
 				<div
-					class="absolute -inset-0.5 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"
+					class="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/0 via-cyan-500/15 to-cyan-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"
 				></div>
 
 				<div class="relative">
@@ -368,7 +368,7 @@
 					<div class="mb-4">
 						<span
 							class="text-8xl sm:text-9xl md:text-[10rem] font-black leading-none"
-							style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(216 180 254) 0%, rgb(147 197 253) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+							style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(34 211 238) 0%, rgb(103 232 249) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
 						>
 							3
 						</span>
@@ -380,7 +380,7 @@
 					</h4>
 
 					<!-- Capacité -->
-					<p class="text-lg sm:text-xl text-purple-300/80 font-semibold mb-4">
+					<p class="text-lg sm:text-xl text-cyan-300/80 font-semibold mb-4">
 						pour 15, 15 et 8 personnes
 					</p>
 
@@ -395,11 +395,11 @@
 			<!-- BLOC 2 - Chalets duo -->
 			<div
 				bind:this={bloc2Element}
-				class="opacity-0 relative group p-8 sm:p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-blue-900/10 to-transparent backdrop-blur-sm hover:border-blue-500/30 transition-all duration-500"
+				class="opacity-0 relative group p-8 sm:p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-orange-900/15 to-transparent backdrop-blur-sm hover:border-orange-500/30 transition-all duration-500"
 			>
 				<!-- Glow effect -->
 				<div
-					class="absolute -inset-0.5 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-blue-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"
+					class="absolute -inset-0.5 bg-gradient-to-r from-orange-500/0 via-orange-500/15 to-orange-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"
 				></div>
 
 				<div class="relative">
@@ -407,7 +407,7 @@
 					<div class="mb-4">
 						<span
 							class="text-8xl sm:text-9xl md:text-[10rem] font-black leading-none"
-							style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(147 197 253) 0%, rgb(216 180 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+							style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(251 146 60) 0%, rgb(253 186 116) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
 						>
 							12
 						</span>
@@ -417,7 +417,7 @@
 					<h4 class="text-2xl sm:text-3xl font-bold text-white mb-2">Chalets duo</h4>
 
 					<!-- Capacité -->
-					<p class="text-lg sm:text-xl text-blue-300/80 font-semibold mb-4">
+					<p class="text-lg sm:text-xl text-orange-300/80 font-semibold mb-4">
 						pour 2 personnes chacun
 					</p>
 
@@ -434,7 +434,7 @@
 			<!-- Note 1 -->
 			<div
 				bind:this={note1Element}
-				class="opacity-0 flex gap-4 p-6 sm:p-8 rounded-2xl bg-purple-900/10 border border-purple-500/20 backdrop-blur-sm"
+				class="opacity-0 flex gap-4 p-6 sm:p-8 rounded-2xl bg-pink-900/15 border border-pink-500/25 backdrop-blur-sm"
 			>
 				<div class="text-3xl sm:text-4xl flex-shrink-0">🧡</div>
 				<p class="text-base sm:text-lg text-white/90 font-light leading-relaxed">

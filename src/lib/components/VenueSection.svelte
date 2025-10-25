@@ -261,11 +261,11 @@
 >
 	<!-- Orbes lumineux -->
 	<div
-		class="venue-orb-1 absolute right-0 top-20 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-purple-500/15 blur-xl md:blur-3xl pointer-events-none"
+		class="venue-orb-1 absolute right-0 top-20 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-emerald-500/18 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 	<div
-		class="venue-orb-2 absolute left-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-blue-500/15 blur-xl md:blur-3xl pointer-events-none"
+		class="venue-orb-2 absolute left-0 bottom-40 w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-rose-500/18 blur-xl md:blur-3xl pointer-events-none"
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
@@ -279,7 +279,7 @@
 				<div bind:this={titleElement} class="opacity-0">
 					<h2
 						class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 transition-all duration-500 hover:tracking-wide"
-						style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(221 214 254) 0%, rgb(186 230 253) 50%, rgb(221 214 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1;"
+						style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(16 185 129) 0%, rgb(110 231 183) 50%, rgb(251 113 133) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1;"
 					>
 						Le domaine
 					</h2>
@@ -320,20 +320,25 @@
 
 				<!-- Mot d'impact "INCROYABLE" - avec animation lettre par lettre -->
 				<div bind:this={incroyableWord} class="pt-3 sm:pt-4">
-					<p
-						class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black"
-						style="font-family: var(--font-serif); will-change: transform; line-height: 0.95; letter-spacing: -0.02em;"
-					>
-						{#each 'INCROYABLE'.split('') as letter, i}
-							<span
-								class="inline-block opacity-0 incroyable-letter"
-								data-index={i}
-								style="background: linear-gradient(135deg, rgb(216 180 254) 0%, rgb(147 197 253) 50%, rgb(216 180 254) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
-							>
-								{letter}
-							</span>
-						{/each}
-					</p>
+					<div class="relative inline-block">
+						<!-- Glow effect -->
+						<div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/30 via-teal-500/30 to-rose-500/30 rounded-3xl blur-2xl opacity-70 animate-pulse-slow"></div>
+
+						<p
+							class="relative text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black"
+							style="font-family: var(--font-serif); will-change: transform; line-height: 0.95; letter-spacing: -0.02em;"
+						>
+							{#each 'INCROYABLE'.split('') as letter, i}
+								<span
+									class="inline-block opacity-0 incroyable-letter"
+									data-index={i}
+									style="background: linear-gradient(135deg, rgb(52 211 153) 0%, rgb(20 184 166) 50%, rgb(244 114 182) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+								>
+									{letter}
+								</span>
+							{/each}
+						</p>
+					</div>
 				</div>
 			</div>
 
@@ -342,7 +347,7 @@
 				<div class="relative group" style="perspective: 1000px;">
 					<!-- Glow effect animé -->
 					<div
-						class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow"
+						class="absolute -inset-1 bg-gradient-to-r from-emerald-500/25 via-teal-500/25 to-rose-500/25 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow"
 					></div>
 
 					<!-- Image container avec effet 3D subtil -->
@@ -356,7 +361,7 @@
 						/>
 
 						<!-- Overlay subtil au hover -->
-						<div class="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+						<div class="absolute inset-0 bg-gradient-to-t from-emerald-500/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
 					</div>
 				</div>
 			</div>
