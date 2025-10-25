@@ -187,7 +187,7 @@
 	id="intro-section"
 	bind:this={introSection}
 	class="relative min-h-screen flex items-center justify-center pt-20 sm:pt-24 pb-24 sm:pb-32 px-6 sm:px-10"
-	style="background: rgb(15 23 42); overflow-x: hidden; overflow-y: visible;"
+	style="background: rgb(15 23 42); "
 >
 	<!-- Orbes lumineux -->
 	<div

@@ -466,7 +466,7 @@
 		rgb(15 23 42) 0%,
 		rgb(10 16 35) 50%,
 		rgb(15 23 42) 100%
-	); overflow-x: hidden; overflow-y: visible;"
+	); "
 >
 	<!-- Orbes lumineux -->
 	<div
