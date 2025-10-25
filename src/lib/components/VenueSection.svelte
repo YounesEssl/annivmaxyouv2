@@ -269,6 +269,11 @@
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
+	<!-- Éléments décoratifs colorés -->
+	<div class="absolute top-1/4 right-20 w-32 h-32 rounded-full bg-gradient-to-br from-teal-400/10 to-cyan-500/10 blur-2xl pointer-events-none" style="z-index: 1;"></div>
+	<div class="absolute bottom-1/3 left-32 w-24 h-24 rounded-lg bg-gradient-to-tr from-rose-400/10 to-pink-500/10 blur-xl pointer-events-none rotate-45" style="z-index: 1;"></div>
+	<div class="absolute top-1/2 right-1/4 w-16 h-16 rounded-full bg-amber-400/15 blur-lg pointer-events-none" style="z-index: 1;"></div>
+
 	<!-- Contenu -->
 	<div class="relative z-10 max-w-7xl mx-auto">
 		<!-- Grid layout : texte à gauche, image à droite (inversé sur mobile) -->
@@ -292,12 +297,9 @@
 						class="opacity-0 text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed"
 					>
 						À seulement
-						<span class="font-semibold text-white relative inline-block">
+						<span class="font-semibold relative inline-block" style="background: linear-gradient(135deg, rgb(52 211 153) 0%, rgb(110 231 183) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
 							1h30 de Paris
-							<span
-								class="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-purple-400/50 via-purple-300/50 to-purple-400/50"
-							></span>
-						</span>, on vous invite dans un lieu de rêve, privatisé rien que pour nous :
+						</span>, on vous invite dans un <span class="font-semibold" style="color: rgb(251 113 133);">lieu de rêve</span>, privatisé rien que pour nous :
 					</p>
 
 					<p
@@ -305,8 +307,8 @@
 						class="opacity-0 text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed"
 					>
 						un grand domaine façon
-						<span class="font-semibold text-white">village de vacances</span>, avec tout ce
-						qu'il faut pour faire la fête, faire du sport, manger, danser, boire et quelques
+						<span class="font-semibold" style="background: linear-gradient(135deg, rgb(16 185 129) 0%, rgb(52 211 153) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">village de vacances</span>, avec tout ce
+						qu'il faut pour faire la <span class="font-semibold" style="color: rgb(251 191 36);">fête</span>, faire du <span class="font-semibold" style="color: rgb(94 234 212);">sport</span>, manger, danser, boire et quelques
 						surprises…
 					</p>
 

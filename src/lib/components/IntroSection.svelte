@@ -199,6 +199,11 @@
 		style="will-change: transform, opacity; z-index: 5;"
 	></div>
 
+	<!-- Éléments décoratifs colorés -->
+	<div class="absolute top-1/4 left-1/4 w-24 h-24 rounded-lg bg-gradient-to-br from-cyan-400/10 to-blue-500/10 blur-xl pointer-events-none rotate-12" style="z-index: 1;"></div>
+	<div class="absolute bottom-1/3 right-1/4 w-32 h-32 rounded-full bg-gradient-to-tr from-pink-400/12 to-rose-500/12 blur-2xl pointer-events-none" style="z-index: 1;"></div>
+	<div class="absolute top-1/2 right-1/3 w-20 h-20 rounded-full bg-amber-400/15 blur-lg pointer-events-none" style="z-index: 1;"></div>
+
 	<!-- Contenu centré et unifié -->
 	<div class="relative z-10 max-w-4xl mx-auto text-center space-y-12 sm:space-y-16">
 		<!-- Titre principal -->

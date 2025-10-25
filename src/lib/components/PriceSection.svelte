@@ -389,6 +389,12 @@
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
+	<!-- Éléments décoratifs colorés -->
+	<div class="absolute top-1/4 left-1/3 w-32 h-32 rounded-full bg-gradient-to-br from-orange-400/12 to-amber-500/12 blur-2xl pointer-events-none" style="z-index: 1;"></div>
+	<div class="absolute bottom-1/3 right-1/4 w-24 h-24 rounded-lg bg-gradient-to-tr from-rose-400/10 to-pink-500/10 blur-xl pointer-events-none -rotate-12" style="z-index: 1;"></div>
+	<div class="absolute top-2/3 right-1/3 w-20 h-20 rounded-full bg-violet-400/15 blur-lg pointer-events-none" style="z-index: 1;"></div>
+	<div class="absolute top-1/2 left-20 w-16 h-16 rounded-lg bg-blue-400/12 blur-lg pointer-events-none rotate-45" style="z-index: 1;"></div>
+
 	<!-- Contenu -->
 	<div class="relative z-10 max-w-7xl mx-auto">
 		<!-- Titre principal -->
@@ -606,7 +612,7 @@
 		<!-- Message final -->
 		<div bind:this={finalMessageElement} class="opacity-0 max-w-4xl mx-auto text-center">
 			<p class="text-xl sm:text-2xl md:text-3xl text-white/90 font-light leading-relaxed">
-				Franchement, on ne fait pas ça tous les ans, c'est peut-être même une fois dans une vie, alors on espère que vous serez au rendez-vous 🔥
+				Franchement, on ne fait pas ça <span class="font-semibold" style="color: rgb(167 139 250);">tous les ans</span>, c'est peut-être même une <span class="font-semibold" style="background: linear-gradient(135deg, rgb(251 146 60) 0%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">fois dans une vie</span>, alors on espère que vous serez au <span class="font-semibold" style="color: rgb(251 113 133);">rendez-vous</span> 🔥
 			</p>
 		</div>
 	</div>

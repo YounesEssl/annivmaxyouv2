@@ -166,7 +166,7 @@
 		<!-- Message principal -->
 		<div bind:this={messageElement} class="opacity-0">
 			<p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white/90 font-light leading-relaxed">
-				Si tu es prêt à t'inscrire définitivement et à régler, tu peux tout de suite cliquer sur le bouton <span class="font-semibold text-white">S'inscrire</span> et remplir le formulaire
+				Si tu es prêt à <span class="font-semibold" style="background: linear-gradient(135deg, rgb(16 185 129) 0%, rgb(236 72 153) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">t'inscrire définitivement</span> et à régler, tu peux tout de suite cliquer sur le bouton <span class="font-semibold text-white">S'inscrire</span> et remplir le <span class="font-semibold" style="color: rgb(236 72 153);">formulaire</span>
 			</p>
 		</div>
 

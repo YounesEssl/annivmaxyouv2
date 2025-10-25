@@ -268,6 +268,11 @@
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
+	<!-- Éléments décoratifs colorés -->
+	<div class="absolute top-1/3 right-1/3 w-28 h-28 rounded-lg bg-gradient-to-br from-pink-400/12 to-rose-500/12 blur-2xl pointer-events-none rotate-45" style="z-index: 1;"></div>
+	<div class="absolute bottom-1/4 left-1/4 w-24 h-24 rounded-full bg-gradient-to-tr from-amber-400/15 to-yellow-500/15 blur-xl pointer-events-none" style="z-index: 1;"></div>
+	<div class="absolute top-2/3 left-1/3 w-16 h-16 rounded-full bg-violet-400/12 blur-lg pointer-events-none" style="z-index: 1;"></div>
+
 	<!-- Contenu -->
 	<div class="relative z-10 max-w-7xl mx-auto">
 		<!-- Titre principal -->
@@ -353,7 +358,7 @@
 				<!-- Bloc 1 - Soirée -->
 				<div bind:this={bloc1Element} class="opacity-0">
 					<p class="text-xl sm:text-2xl md:text-3xl text-white/90 font-light leading-relaxed mb-4">
-						Pour la soirée du samedi, c'est
+						Pour la <span class="font-semibold" style="color: rgb(217 70 239);">soirée du samedi</span>, c'est
 						<span
 							class="font-semibold"
 							style="background: linear-gradient(135deg, rgb(232 121 249) 0%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
@@ -362,31 +367,31 @@
 						</span>.
 					</p>
 					<p class="text-lg sm:text-xl text-white/80 font-light leading-relaxed">
-						Néanmoins, l'important est que vous vous sentiez à l'aise, et la seule obligation est de vous habiller de manière élégante. Si le cœur vous en dit, une robe ou une chemise serait un excellent choix pour l'occasion.
+						Néanmoins, l'important est que vous vous sentiez à l'aise, et la seule obligation est de vous habiller de manière <span class="font-semibold" style="color: rgb(251 191 36);">élégante</span>. Si le cœur vous en dit, une <span class="font-semibold" style="color: rgb(232 121 249);">robe</span> ou une <span class="font-semibold" style="color: rgb(250 204 21);">chemise</span> serait un excellent choix pour l'occasion.
 					</p>
 				</div>
 
 				<!-- Divider 1 -->
 				<div bind:this={divider1Element} class="opacity-0">
-					<div class="h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent"></div>
+					<div class="h-px bg-gradient-to-r from-transparent via-fuchsia-500/40 to-transparent"></div>
 				</div>
 
 				<!-- Bloc 2 - Sport -->
 				<div bind:this={bloc2Element} class="opacity-0">
 					<p class="text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed">
-						Pensez à prendre une <span class="font-semibold text-white">tenue de sport</span> si vous comptez en faire <span class="text-white/60">(on pense notamment à ceux qui veulent faire du foot)</span>.
+						Pensez à prendre une <span class="font-semibold" style="color: rgb(250 204 21);">tenue de sport</span> si vous comptez en faire <span class="text-white/60">(on pense notamment à ceux qui veulent faire du <span style="color: rgb(134 239 172);">foot</span>)</span>.
 					</p>
 				</div>
 
 				<!-- Divider 2 -->
 				<div bind:this={divider2Element} class="opacity-0">
-					<div class="h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"></div>
+					<div class="h-px bg-gradient-to-r from-transparent via-yellow-500/40 to-transparent"></div>
 				</div>
 
 				<!-- Bloc 3 - Maillot -->
 				<div bind:this={bloc3Element} class="opacity-0">
 					<p class="text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed">
-						Enfin, si le temps le permet, la piscine chauffée sera accessible. Pensez donc à glisser un <span class="font-semibold text-white">maillot de bain</span> dans votre valise, au cas où.
+						Enfin, si le temps le permet, la <span class="font-semibold" style="color: rgb(103 232 249);">piscine chauffée</span> sera accessible. Pensez donc à glisser un <span class="font-semibold" style="background: linear-gradient(135deg, rgb(232 121 249) 0%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">maillot de bain</span> dans votre valise, au cas où.
 					</p>
 				</div>
 			</div>

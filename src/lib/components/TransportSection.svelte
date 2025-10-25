@@ -256,6 +256,11 @@
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
+	<!-- Éléments décoratifs colorés -->
+	<div class="absolute top-1/4 right-1/4 w-24 h-24 rounded-lg bg-gradient-to-br from-green-400/12 to-emerald-500/12 blur-xl pointer-events-none -rotate-12" style="z-index: 1;"></div>
+	<div class="absolute bottom-1/3 left-1/4 w-20 h-20 rounded-full bg-gradient-to-tr from-yellow-400/15 to-amber-500/15 blur-lg pointer-events-none" style="z-index: 1;"></div>
+	<div class="absolute top-1/2 left-1/3 w-32 h-32 rounded-full bg-orange-400/10 blur-2xl pointer-events-none" style="z-index: 1;"></div>
+
 	<!-- Contenu -->
 	<div class="relative z-10 max-w-7xl mx-auto">
 		<!-- Titre principal -->
@@ -275,19 +280,19 @@
 				<!-- Bloc 1 - Localisation -->
 				<div bind:this={bloc1Element} class="opacity-0">
 					<p class="text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed">
-						Le village se trouve à environ <span class="font-semibold text-white">1h30 de route au sud de Paris</span>. Le plus simple, c'est donc de venir en voiture.
+						Le village se trouve à environ <span class="font-semibold" style="background: linear-gradient(135deg, rgb(163 230 53) 0%, rgb(251 191 36) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">1h30 de route au sud de Paris</span>. Le plus simple, c'est donc de venir en <span class="font-semibold" style="color: rgb(132 204 22);">voiture</span>.
 					</p>
 				</div>
 
 				<!-- Divider 1 -->
 				<div bind:this={divider1Element}>
-					<div class="h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" style="transform-origin: left;"></div>
+					<div class="h-px bg-gradient-to-r from-transparent via-lime-500/40 to-transparent" style="transform-origin: left;"></div>
 				</div>
 
 				<!-- Bloc 2 - Organisation covoiturage -->
 				<div bind:this={bloc2Element} class="opacity-0">
 					<p class="text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed">
-						On vous laisse vous organiser entre vous pour les groupes de voiture : pensez à en parler assez vite pour savoir qui part avec qui !
+						On vous laisse vous organiser entre vous pour les <span class="font-semibold" style="color: rgb(251 191 36);">groupes de voiture</span> : pensez à en parler assez vite pour savoir qui part avec qui !
 					</p>
 				</div>
 

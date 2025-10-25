@@ -286,6 +286,11 @@
 		style="will-change: transform, opacity; z-index: 1;"
 	></div>
 
+	<!-- Éléments décoratifs colorés -->
+	<div class="absolute top-1/3 left-1/4 w-20 h-20 rounded-full bg-gradient-to-br from-violet-400/12 to-purple-500/12 blur-xl pointer-events-none" style="z-index: 1;"></div>
+	<div class="absolute bottom-1/4 right-1/3 w-28 h-28 rounded-lg bg-gradient-to-tr from-orange-400/10 to-amber-500/10 blur-2xl pointer-events-none rotate-12" style="z-index: 1;"></div>
+	<div class="absolute top-2/3 right-20 w-16 h-16 rounded-full bg-teal-400/15 blur-lg pointer-events-none" style="z-index: 1;"></div>
+
 	<!-- Contenu -->
 	<div class="relative z-10 max-w-7xl mx-auto">
 		<!-- Titre principal -->
@@ -330,9 +335,9 @@
 			<div bind:this={introElement} class="opacity-0 space-y-4 order-1 lg:order-2">
 				<p class="text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed">
 					On aura la chance de profiter de
-					<span class="font-semibold text-white">15 chalets tout confort</span>, pouvant
+					<span class="font-semibold" style="background: linear-gradient(135deg, rgb(6 182 212) 0%, rgb(103 232 249) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">15 chalets tout confort</span>, pouvant
 					accueillir jusqu'à
-					<span class="font-semibold text-white">62 personnes</span>, avec un lit individuel
+					<span class="font-semibold" style="background: linear-gradient(135deg, rgb(251 146 60) 0%, rgb(253 186 116) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">62 personnes</span>, avec un <span class="font-semibold" style="color: rgb(94 234 212);">lit individuel</span>
 					réservé pour chaque invité.
 				</p>
 				<p class="text-base sm:text-lg text-white/60 font-light italic">
