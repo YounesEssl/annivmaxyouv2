@@ -59,6 +59,8 @@
 	/>
 </svelte:head>
 
-{@render children?.()}
+<div class="overflow-x-hidden w-full">
+	{@render children?.()}
+</div>
 
 <FloatingCTA />

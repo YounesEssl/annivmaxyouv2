@@ -253,7 +253,7 @@
 		rgb(74 4 78) 15%,
 		rgb(24 51 71) 35%,
 		rgb(15 23 42) 70%
-	); overflow-x: clip; overflow-y: visible;"
+	); overflow-x: hidden; overflow-y: visible;"
 >
 	<!-- Orbes lumineux -->
 	<div

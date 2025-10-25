@@ -143,7 +143,7 @@
 
 <div
 	bind:this={separatorElement}
-	class="separator-container relative w-full h-24 flex items-center justify-center opacity-0"
+	class="separator-container relative w-full h-24 flex items-center justify-center opacity-0 overflow-x-hidden"
 	style="transform-origin: center;"
 >
 	{#if variant === 'waves'}

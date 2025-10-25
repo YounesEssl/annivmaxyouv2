@@ -267,7 +267,7 @@
 		rgb(15 23 42) 0%,
 		rgb(8 12 30) 50%,
 		rgb(15 23 42) 100%
-	); overflow-x: clip; overflow-y: visible;"
+	); overflow-x: hidden; overflow-y: visible;"
 >
 	<!-- Dégradé de transition depuis section précédente -->
 	<div
