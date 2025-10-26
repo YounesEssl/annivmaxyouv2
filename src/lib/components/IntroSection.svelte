@@ -261,7 +261,7 @@
 		<!-- Description -->
 		<div bind:this={descriptionElement} class="opacity-0">
 			<p class="text-2xl sm:text-3xl md:text-4xl text-white/80 font-light leading-relaxed">
-				On a vu les choses <span class="font-semibold text-white">très grand</span>
+				On a vu les choses <span class="font-semibold text-white">en très grand</span>
 				<br />
 				pour que ce week-end soit
 			</p>

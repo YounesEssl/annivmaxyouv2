@@ -511,7 +511,7 @@
 				<div class="relative flex flex-col items-center justify-center text-center space-y-4 min-h-[240px]">
 					<div class="text-7xl sm:text-8xl">🍽️</div>
 					<h4 class="text-3xl sm:text-4xl font-bold text-white">Tous les repas</h4>
-					<p class="text-xl sm:text-2xl text-white/70 font-light">Matin, midi & soir</p>
+					<p class="text-xl sm:text-2xl text-white/70 font-light">Midi & soir</p>
 				</div>
 			</div>
 
