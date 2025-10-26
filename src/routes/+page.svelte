@@ -2,11 +2,13 @@
 	import HeroSection from '$lib/components/HeroSection.svelte';
 	import IntroSection from '$lib/components/IntroSection.svelte';
 	import VenueSection from '$lib/components/VenueSection.svelte';
+	import ActivitiesSection from '$lib/components/ActivitiesSection.svelte';
 	import AccommodationSection from '$lib/components/AccommodationSection.svelte';
 	import FoodSection from '$lib/components/FoodSection.svelte';
 	import DrinkSection from '$lib/components/DrinkSection.svelte';
 	import LuggageSection from '$lib/components/LuggageSection.svelte';
 	import TransportSection from '$lib/components/TransportSection.svelte';
+	import RulesSection from '$lib/components/RulesSection.svelte';
 	import PriceSection from '$lib/components/PriceSection.svelte';
 	import CTASection from '$lib/components/CTASection.svelte';
 	import DownloadSection from '$lib/components/DownloadSection.svelte';
@@ -24,6 +26,10 @@
 <VenueSection />
 
 <SectionSeparator variant="gradient" colors={['#06b6d4', '#fb923c', '#fbbf24']} />
+
+<ActivitiesSection />
+
+<SectionSeparator variant="particles" colors={['#a78bfa', '#60a5fa', '#818cf8']} />
 
 <AccommodationSection />
 
@@ -44,6 +50,10 @@
 <TransportSection />
 
 <SectionSeparator variant="sparkles" colors={['#a78bfa', '#ec4899', '#fbbf24']} />
+
+<RulesSection />
+
+<SectionSeparator variant="waves" colors={['#fbbf24', '#f59e0b', '#f97316']} />
 
 <PriceSection />
 
