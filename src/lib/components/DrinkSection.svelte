@@ -16,7 +16,7 @@
 
 	// Alcools avec emojis pour cartes visuelles
 	const alcohols = [
-		{ emoji: '🍺', text: '60L de bière', color: 'from-amber-500/20 to-yellow-500/20' },
+		{ emoji: '🍺', text: '100L de bière', color: 'from-amber-500/20 to-yellow-500/20' },
 		{ emoji: '🍷', text: 'Vin rouge & blanc', color: 'from-red-500/20 to-purple-500/20' },
 		{ emoji: '🥃', text: 'Vodka, rhum, gin, JET 27, Jäger…', color: 'from-blue-500/20 to-cyan-500/20' },
 		{ emoji: '🍾', text: 'Champagne', color: 'from-yellow-500/20 to-amber-500/20' }
