@@ -9,6 +9,7 @@
 	let introElement: HTMLElement;
 	let solutionElement: HTMLElement;
 	let maxiSaladElement: HTMLElement;
+	let menuCardsElement: HTMLElement;
 	let ideaElement: HTMLElement;
 	let optionElement: HTMLElement;
 	let encouragementElement: HTMLElement;
@@ -134,6 +135,26 @@
 				ease: 'back.out(2)',
 				scrollTrigger: {
 					trigger: maxiSaladElement,
+					start: 'top 65%',
+					toggleActions: 'play none none reverse'
+				}
+			}
+		);
+
+		// Menu cards - stagger animation
+		const menuCards = gsap.utils.toArray<HTMLElement>('.menu-card');
+		gsap.fromTo(
+			menuCards,
+			{ opacity: 0, x: (i: number) => (i % 2 === 0 ? -60 : 60), rotateY: (i: number) => (i % 2 === 0 ? -8 : 8) },
+			{
+				opacity: 1,
+				x: 0,
+				rotateY: 0,
+				duration: 0.8,
+				stagger: 0.2,
+				ease: 'power3.out',
+				scrollTrigger: {
+					trigger: menuCardsElement,
 					start: 'top 65%',
 					toggleActions: 'play none none reverse'
 				}
@@ -500,33 +521,111 @@
 		<!-- Solution -->
 		<div bind:this={solutionElement} class="opacity-0 mb-10 sm:mb-12 text-center max-w-4xl mx-auto">
 			<p class="text-lg sm:text-xl text-white/80 font-light leading-relaxed">
-				Pour éviter de passer notre week-end dans la cuisine et passer un max de temps à profiter ensemble, on a opté pour une solution efficace :
+				Pour éviter de passer notre week-end dans la cuisine et passer un max de temps ensemble, on a prévu un vrai menu pour chaque repas :
 			</p>
 		</div>
 
-		<!-- MAXI salades - gros titre mis en valeur -->
-		<div bind:this={maxiSaladElement} class="opacity-0 mb-10 sm:mb-12 text-center" style="perspective: 1000px;">
-			<div class="relative inline-block">
-				<!-- Glow effect -->
-				<div class="absolute -inset-4 bg-gradient-to-r from-green-500/30 via-lime-500/30 to-green-500/30 rounded-3xl blur-2xl opacity-70 animate-pulse-slow"></div>
+		<!-- Menu du week-end -->
+		<div bind:this={maxiSaladElement} class="opacity-0 mb-12 sm:mb-16" style="perspective: 1200px;">
+			<div class="relative">
+				<!-- Glow ambiant -->
+				<div class="absolute -inset-8 bg-gradient-to-br from-orange-500/15 via-purple-500/15 to-emerald-500/15 rounded-[40px] blur-3xl opacity-70 animate-pulse-slow"></div>
 
-				<h3
-					class="relative text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-tight"
-					style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(134 239 172) 0%, rgb(187 247 208) 50%, rgb(134 239 172) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
-				>
-					MAXI salades<br />
-					<span class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl">de pâtes maison !</span>
-				</h3>
+				<div class="relative">
+					<!-- Titre "Le Menu" -->
+					<h3
+						class="text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight mb-12 sm:mb-16"
+						style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(251 191 36) 0%, rgb(249 115 22) 40%, rgb(236 72 153) 70%, rgb(168 85 247) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+					>
+						Le Menu
+					</h3>
+
+					<!-- Cards des repas -->
+					<div bind:this={menuCardsElement} class="space-y-6 sm:space-y-8 max-w-4xl mx-auto" style="perspective: 800px;">
+
+						<!-- Samedi midi -->
+						<div class="menu-card group relative overflow-hidden p-7 sm:p-10 rounded-3xl border border-amber-500/25 bg-gradient-to-br from-amber-950/30 via-orange-950/10 to-transparent backdrop-blur-sm transition-all duration-500 hover:border-amber-400/50 hover:scale-[1.02]" style="will-change: transform, opacity;">
+							<!-- Hover glow -->
+							<div class="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+							<div class="relative flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+								<div class="text-7xl sm:text-8xl shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" style="filter: drop-shadow(0 0 25px rgba(251, 146, 60, 0.5));">🍝</div>
+								<div class="text-center sm:text-left">
+									<span class="inline-block px-4 py-1.5 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.25em] font-bold text-amber-300 border border-amber-500/40 bg-amber-500/10 mb-3">
+										Samedi midi
+									</span>
+									<p class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight"
+										style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(252 211 77) 0%, rgb(251 146 60) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+										Pâtes bolognaises
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Connecteur -->
+						<div class="flex justify-center">
+							<div class="w-px h-6 sm:h-8 bg-gradient-to-b from-amber-500/40 via-purple-500/40 to-purple-500/40"></div>
+						</div>
+
+						<!-- Samedi soir -->
+						<div class="menu-card group relative overflow-hidden p-7 sm:p-10 rounded-3xl border border-purple-500/25 bg-gradient-to-br from-purple-950/30 via-fuchsia-950/10 to-transparent backdrop-blur-sm transition-all duration-500 hover:border-purple-400/50 hover:scale-[1.02]" style="will-change: transform, opacity;">
+							<!-- Hover glow -->
+							<div class="absolute bottom-0 left-0 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+							<div class="relative flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+								<div class="text-7xl sm:text-8xl shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6" style="filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.5));">🧀</div>
+								<div class="text-center sm:text-left">
+									<span class="inline-block px-4 py-1.5 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.25em] font-bold text-purple-300 border border-purple-500/40 bg-purple-500/10 mb-3">
+										Samedi soir
+									</span>
+									<p class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight"
+										style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(196 181 253) 0%, rgb(232 121 249) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+										Gratin dauphinois
+									</p>
+									<p class="text-2xl sm:text-3xl md:text-4xl font-bold mt-1 text-white/70" style="font-family: var(--font-serif);">
+										+ Cordon bleu
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Connecteur -->
+						<div class="flex justify-center">
+							<div class="w-px h-6 sm:h-8 bg-gradient-to-b from-purple-500/40 via-emerald-500/40 to-emerald-500/40"></div>
+						</div>
+
+						<!-- Dimanche midi -->
+						<div class="menu-card group relative overflow-hidden p-7 sm:p-10 rounded-3xl border border-emerald-500/25 bg-gradient-to-br from-emerald-950/30 via-green-950/10 to-transparent backdrop-blur-sm transition-all duration-500 hover:border-emerald-400/50 hover:scale-[1.02]" style="will-change: transform, opacity;">
+							<!-- Hover glow -->
+							<div class="absolute top-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+							<div class="relative flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+								<div class="text-7xl sm:text-8xl shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" style="filter: drop-shadow(0 0 25px rgba(52, 211, 153, 0.5));">🥗</div>
+								<div class="text-center sm:text-left">
+									<span class="inline-block px-4 py-1.5 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.25em] font-bold text-emerald-300 border border-emerald-500/40 bg-emerald-500/10 mb-3">
+										Dimanche midi
+									</span>
+									<p class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight"
+										style="font-family: var(--font-serif); background: linear-gradient(135deg, rgb(110 231 183) 0%, rgb(52 211 153) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+										Salade de pâtes
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
 			</div>
-			<p class="text-lg sm:text-xl text-white/80 font-light mt-6">
-				Ce sera donc le repas officiel proposé, offert par nos soins.
+
+			<p class="text-xl sm:text-2xl text-white/80 font-light mt-10 sm:mt-12 text-center">
+				Tout est offert par nos soins 🎉
 			</p>
 		</div>
 
 		<!-- Idée -->
 		<div bind:this={ideaElement} class="opacity-0 mb-8 sm:mb-10 text-center max-w-4xl mx-auto">
 			<p class="text-lg sm:text-xl text-white/80 font-light leading-relaxed">
-				L'idée, c'est de faire simple, convivial, et de pouvoir manger dans la grande salle tous ensemble.
+				L'idée, c'est de manger tous ensemble dans la grande salle, simplement et sans prise de tête.
 			</p>
 		</div>
 
@@ -602,7 +701,7 @@
 						Important
 					</h4>
 					<p class="text-lg sm:text-xl text-white/90 font-light leading-relaxed">
-						Si vous avez une allergie alimentaire ou si vous savez à l'avance que vous ne mangerez pas de salade de pâtes, merci de le dire au plus vite à <span class="font-semibold text-white">Maxence ou Younes</span>, pour qu'on puisse s'organiser au mieux côté logistique.
+						Si vous avez une allergie alimentaire ou un régime particulier, merci de le dire au plus vite à <span class="font-semibold text-white">Maxence ou Younes</span>, pour qu'on puisse s'organiser au mieux côté logistique.
 					</p>
 				</div>
 			</div>
@@ -627,7 +726,8 @@
 		transform: translate3d(0, 0, 0);
 	}
 
-	.idea-item {
+	.idea-item,
+	.menu-card {
 		will-change: opacity, transform;
 	}
 

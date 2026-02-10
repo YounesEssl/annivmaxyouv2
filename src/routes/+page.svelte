@@ -6,6 +6,7 @@
 	import AccommodationSection from '$lib/components/AccommodationSection.svelte';
 	import FoodSection from '$lib/components/FoodSection.svelte';
 	import DrinkSection from '$lib/components/DrinkSection.svelte';
+	import DJSection from '$lib/components/DJSection.svelte';
 	import LuggageSection from '$lib/components/LuggageSection.svelte';
 	import TransportSection from '$lib/components/TransportSection.svelte';
 	import RulesSection from '$lib/components/RulesSection.svelte';
@@ -42,6 +43,10 @@
 <DrinkSection />
 
 <SectionSeparator variant="orbit" colors={['#d946ef', '#facc15', '#fb7185']} />
+
+<DJSection />
+
+<SectionSeparator variant="gradient" colors={['#4ade80', '#22c55e', '#a3e635']} />
 
 <LuggageSection />
 
